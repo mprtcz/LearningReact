@@ -15,7 +15,6 @@ class AmountSpecifier extends Component {
             <Form.Control type="number" placeholder="10000" />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlSelect1">
-            <Form.Label>currency</Form.Label>
             <Form.Control as="select">
               {this.currencies.map((currency) => (
                 <option>{currency}</option>
