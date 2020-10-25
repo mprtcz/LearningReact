@@ -28,6 +28,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - run: npm install gh-pages
     # Runs a single command using the runners shell
     - name: Deploy React app!
       run: npm run deploy
