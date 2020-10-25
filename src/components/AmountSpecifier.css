@@ -1,0 +1,10 @@
+.amount-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.amount-wrapper-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
