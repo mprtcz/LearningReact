@@ -8,3 +8,11 @@
   flex-direction: column;
   align-items: center;
 }
+
+.form-group {
+  margin: 8px;
+}
+
+.form-label {
+  margin-right: 6px;
+}
