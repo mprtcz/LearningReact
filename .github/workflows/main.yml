@@ -32,7 +32,7 @@ jobs:
     - run: npm install gh-pages
       
     - name: Build React app
-      run: npm run build
+    - run: npm run build
 
     - name: Deploy via gh-pages
       run: gh-pages -d build
