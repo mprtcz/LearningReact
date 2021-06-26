@@ -1,11 +1,15 @@
 import React from "react";
-import "./App.css";
-import AmountSpecifier from "./components/AmountSpecifier";
+import Navbar from './Navbar'
+import Home from './Home'
 
 function App() {
+
   return (
     <div className="App">
-      <AmountSpecifier></AmountSpecifier>
+      <Navbar />
+      <div className="content">
+        <Home />
+      </div>
     </div>
   );
 }
