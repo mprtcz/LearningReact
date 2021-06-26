@@ -8,7 +8,7 @@ class AmountSpecifier extends Component {
   render() {
     return (
       <div class="amount-wrapper-outer">
-        <div>Specify Amount!</div>
+        <div>Specify Amount! ;)</div>
         <Form className="amount-wrapper">
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Amount</Form.Label>
