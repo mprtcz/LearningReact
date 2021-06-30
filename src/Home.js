@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { userState } from 'react';
 
 const Home = () => {
     // let name = 'Mario';
