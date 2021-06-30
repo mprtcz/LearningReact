@@ -21,3 +21,5 @@ To fix this, we are using hooks. They start with word `use`.
 When iterating with `map()` function, every template needs to have a `key` variable. It is used to distinguish between different list items in the dom. Ids must be unique.
 
 Note: for Prettier to work, you need to set the `Default Formatter` option, as well as `format on save` in settings.
+
+Functions are passed to child components just as other variables are.
