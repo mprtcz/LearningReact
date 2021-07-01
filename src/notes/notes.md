@@ -23,3 +23,23 @@ When iterating with `map()` function, every template needs to have a `key` varia
 Note: for Prettier to work, you need to set the `Default Formatter` option, as well as `format on save` in settings.
 
 Functions are passed to child components just as other variables are.
+
+`useEffect` hook fires on every render.
+
+```
+useEffect(() => {
+    console.log("use effect ran");
+  }, []);
+```
+
+Adding an array to useEffect() makes it run only on inital render. Adding a variable to the array make the function run on this variable change.
+
+`useEffect()` is a good function to fetch data from a server.
+
+`npx json-server --watch data/db.json --port 8000` - command to run a local json server. Port specified to replace a default 3k which is used by Node. It creates a server with initial values specified in db.json and creates all endpoints necessary for top-level resources. In this case only for `blogs`.
+
+```
+{blogs && <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete} />}
+```
+
+Conditionally outputing parts of the template. This will render only when `blogs` is present.
