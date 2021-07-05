@@ -57,3 +57,5 @@ When changing subpages, and open requests that are not finished before the compo
 Variable routes are made with `/:variableName`
 
 Importing History object in react lets the dev to manipulate the history of the user in the app.
+
+In case vscode is not importing stuff by default, create jsconfig.js file in the root of the project and past the contents it has now. Especially `"checkJs": true,` needs to be there.
