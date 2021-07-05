@@ -15,10 +15,10 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy": "process.env.CI=false npm run build",
-    "deploy": "process.env.CI=false gh-pages -d build",
-    "build": "react-scripts build",
+    "start": "process.env.CI=false react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "process.env.CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
