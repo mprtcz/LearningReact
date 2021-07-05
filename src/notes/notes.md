@@ -47,3 +47,9 @@ Conditionally outputing parts of the template. This will render only when `blogs
 We can create custom hooks to externalize a portion of the logic to a separate file.
 
 For React to work with multiple subpages, React router is required and has to be installed separately.
+
+A quirk with react Router is, when you have a `/` endpont, it will be presented whenever you want any other subpage, since all of them contain the `/` sign: `/create`, `/user` etc. Works with other routes as well, like `/c` and `/create`, `/omg` and `/omgwtf` and so on. The remedy for this is `exact` keyword added to router path.
+
+Using `Link` from `react-router-dom` instead of \<a> tag, lets the page intercept any unnecessary server calls while changing the subpage. It is much quicker than calling the server each time the user changes the subpage.
+
+When changing subpages, and open requests that are not finished before the component is unmounted from the page will throw an error. This is remedied by using a cleanup function and AbortController.

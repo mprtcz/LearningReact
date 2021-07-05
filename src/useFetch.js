@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);
@@ -6,8 +6,10 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const abortController = new AbortController();
+
     setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortController.signal })
         .then((response) => {
           console.log(response);
           // Checking if the response is 200.
@@ -23,11 +25,17 @@ const useFetch = (url) => {
         })
         // Catching connection errors.
         .catch((error) => {
-          setIsPending(false);
-          console.log(error.message);
-          setError(error.message);
+          if (error.name === "AbortError") {
+            console.log("fetch aborted");
+          } else {
+            setIsPending(false);
+            console.log(error.message);
+            setError(error.message);
+          }
         });
     }, 1000);
+
+    return () => abortController.abort();
   }, []);
 
   return { data, isPending, error };
