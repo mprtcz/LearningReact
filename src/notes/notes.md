@@ -43,3 +43,7 @@ Adding an array to useEffect() makes it run only on inital render. Adding a vari
 ```
 
 Conditionally outputing parts of the template. This will render only when `blogs` is present.
+
+We can create custom hooks to externalize a portion of the logic to a separate file.
+
+For React to work with multiple subpages, React router is required and has to be installed separately.
