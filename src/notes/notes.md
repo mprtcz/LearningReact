@@ -53,3 +53,7 @@ A quirk with react Router is, when you have a `/` endpont, it will be presented 
 Using `Link` from `react-router-dom` instead of \<a> tag, lets the page intercept any unnecessary server calls while changing the subpage. It is much quicker than calling the server each time the user changes the subpage.
 
 When changing subpages, and open requests that are not finished before the component is unmounted from the page will throw an error. This is remedied by using a cleanup function and AbortController.
+
+Variable routes are made with `/:variableName`
+
+Importing History object in react lets the dev to manipulate the history of the user in the app.
