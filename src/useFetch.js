@@ -33,7 +33,7 @@ const useFetch = (url) => {
             setError(error.message);
           }
         });
-    }, 1000);
+    }, 300);
 
     return () => abortController.abort();
   }, []);
